@@ -49,7 +49,7 @@ class MainScene: SKScene {
         // Define the obstacle graph for pathfinding
         // and define the starting and ending points
         
-        let graph = GKObstacleGraph(obstacles: self.obstacleGraph, bufferRadius: 8)
+        let graph = GKObstacleGraph(obstacles: self.obstacleGraph, bufferRadius: 7.0)
         let startNode = GKGraphNode2D(point: float2(x: Float(self.nodes[offset - 1].x), y: Float(self.nodes[offset - 1].y)))
         let endNode = GKGraphNode2D(point: float2(x: Float(self.nodes[offset].x), y: Float(self.nodes[offset].y)))
         
@@ -77,7 +77,7 @@ class MainScene: SKScene {
                 let unitAB = pointB.deltaTo(pointA).normalize()
                 let unitBA = pointA.deltaTo(pointB).normalize()
                 
-                let size: Float = 4.0
+                let size: Float = 3.0
                 var outline = [float2]()
                 outline.append(float2(x: unitAB.y * (-1) * size + pointA.x, y: unitAB.x * size + pointA.y))
                 outline.append(float2(x: unitAB.y * size + pointA.x, y: unitAB.x * (-1) * size + pointA.y))

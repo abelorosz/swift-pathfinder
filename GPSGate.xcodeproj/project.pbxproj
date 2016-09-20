@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8CA454131D90253500A17BEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA4540F1D90253500A17BEA /* AppDelegate.swift */; };
+		8CA454151D90253500A17BEA /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA454111D90253500A17BEA /* MainScene.swift */; };
+		8CA454161D90253500A17BEA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA454121D90253500A17BEA /* MainViewController.swift */; };
+		8CA4541A1D90257100A17BEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CA454191D90257100A17BEA /* Assets.xcassets */; };
+		8CA4541C1D90258C00A17BEA /* GPSGate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA4541B1D90258C00A17BEA /* GPSGate.storyboard */; };
+		8CA4541E1D9025C200A17BEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA4541D1D9025C200A17BEA /* LaunchScreen.storyboard */; };
+		B5FDF23B1D906D5B00A5E812 /* Float2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDF23A1D906D5B00A5E812 /* Float2.swift */; };
+		B5FDF23E1D9077D600A5E812 /* SKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDF23D1D9077D600A5E812 /* SKColor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8CA4540F1D90253500A17BEA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Code/AppDelegate.swift; sourceTree = "<group>"; };
+		8CA454111D90253500A17BEA /* MainScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScene.swift; path = Code/MainScene.swift; sourceTree = "<group>"; };
+		8CA454121D90253500A17BEA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Code/MainViewController.swift; sourceTree = "<group>"; };
+		8CA454171D90254000A17BEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Support/Info.plist; sourceTree = "<group>"; };
+		8CA454191D90257100A17BEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Support/Assets.xcassets; sourceTree = "<group>"; };
+		8CA4541B1D90258C00A17BEA /* GPSGate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = GPSGate.storyboard; path = Support/GPSGate.storyboard; sourceTree = "<group>"; };
+		8CA4541D1D9025C200A17BEA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Support/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5E844AC1D8EEE5A0092C40C /* GPSGate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPSGate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5FDF23A1D906D5B00A5E812 /* Float2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Float2.swift; path = Code/Extensions/Float2.swift; sourceTree = "<group>"; };
+		B5FDF23D1D9077D600A5E812 /* SKColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SKColor.swift; path = Code/Extensions/SKColor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5E844A91D8EEE5A0092C40C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8CA4540D1D9024C500A17BEA /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				8CA454171D90254000A17BEA /* Info.plist */,
+				8CA454191D90257100A17BEA /* Assets.xcassets */,
+				8CA4541B1D90258C00A17BEA /* GPSGate.storyboard */,
+				8CA4541D1D9025C200A17BEA /* LaunchScreen.storyboard */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		8CA4540E1D9024D700A17BEA /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				8CA4540F1D90253500A17BEA /* AppDelegate.swift */,
+				8CA454111D90253500A17BEA /* MainScene.swift */,
+				8CA454121D90253500A17BEA /* MainViewController.swift */,
+				B5FDF23C1D906D5F00A5E812 /* Extensions */,
+			);
+			name = Code;
+			sourceTree = "<group>";
+		};
+		B5E844A31D8EEE5A0092C40C = {
+			isa = PBXGroup;
+			children = (
+				B5E844AE1D8EEE5A0092C40C /* GPSGate */,
+				B5E844AD1D8EEE5A0092C40C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5E844AD1D8EEE5A0092C40C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5E844AC1D8EEE5A0092C40C /* GPSGate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5E844AE1D8EEE5A0092C40C /* GPSGate */ = {
+			isa = PBXGroup;
+			children = (
+				8CA4540E1D9024D700A17BEA /* Code */,
+				8CA4540D1D9024C500A17BEA /* Support */,
+			);
+			path = GPSGate;
+			sourceTree = "<group>";
+		};
+		B5FDF23C1D906D5F00A5E812 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B5FDF23A1D906D5B00A5E812 /* Float2.swift */,
+				B5FDF23D1D9077D600A5E812 /* SKColor.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5E844AB1D8EEE5A0092C40C /* GPSGate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E844BE1D8EEE5A0092C40C /* Build configuration list for PBXNativeTarget "GPSGate" */;
+			buildPhases = (
+				B5E844A81D8EEE5A0092C40C /* Sources */,
+				B5E844A91D8EEE5A0092C40C /* Frameworks */,
+				B5E844AA1D8EEE5A0092C40C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GPSGate;
+			productName = GPSGate;
+			productReference = B5E844AC1D8EEE5A0092C40C /* GPSGate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5E844A41D8EEE5A0092C40C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Abel Orosz";
+				TargetAttributes = {
+					B5E844AB1D8EEE5A0092C40C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BNUYT9K4U6;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B5E844A71D8EEE5A0092C40C /* Build configuration list for PBXProject "GPSGate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5E844A31D8EEE5A0092C40C;
+			productRefGroup = B5E844AD1D8EEE5A0092C40C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5E844AB1D8EEE5A0092C40C /* GPSGate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5E844AA1D8EEE5A0092C40C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CA4541E1D9025C200A17BEA /* LaunchScreen.storyboard in Resources */,
+				8CA4541C1D90258C00A17BEA /* GPSGate.storyboard in Resources */,
+				8CA4541A1D90257100A17BEA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5E844A81D8EEE5A0092C40C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CA454151D90253500A17BEA /* MainScene.swift in Sources */,
+				8CA454131D90253500A17BEA /* AppDelegate.swift in Sources */,
+				B5FDF23E1D9077D600A5E812 /* SKColor.swift in Sources */,
+				8CA454161D90253500A17BEA /* MainViewController.swift in Sources */,
+				B5FDF23B1D906D5B00A5E812 /* Float2.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B5E844BC1D8EEE5A0092C40C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5E844BD1D8EEE5A0092C40C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5E844BF1D8EEE5A0092C40C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = BNUYT9K4U6;
+				INFOPLIST_FILE = "$(SRCROOT)/GPSGate/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abelorosz.GPSGate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B5E844C01D8EEE5A0092C40C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = BNUYT9K4U6;
+				INFOPLIST_FILE = "$(SRCROOT)/GPSGate/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abelorosz.GPSGate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5E844A71D8EEE5A0092C40C /* Build configuration list for PBXProject "GPSGate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E844BC1D8EEE5A0092C40C /* Debug */,
+				B5E844BD1D8EEE5A0092C40C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5E844BE1D8EEE5A0092C40C /* Build configuration list for PBXNativeTarget "GPSGate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E844BF1D8EEE5A0092C40C /* Debug */,
+				B5E844C01D8EEE5A0092C40C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5E844A41D8EEE5A0092C40C /* Project object */;
+}

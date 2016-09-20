@@ -12,14 +12,14 @@ class MainScene: SKScene {
     private var nodeShape: SKShapeNode?
     private var obstacleGraph = [GKPolygonObstacle]()
     
-    override func didMove(to view: SKView) {
-        let w: CGFloat = 8
-        self.nodeShape = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.5)
+    override func sceneDidLoad() {
+        let width: CGFloat = 8
+        self.nodeShape = SKShapeNode.init(rectOf: CGSize.init(width: width, height: width), cornerRadius: width * 0.5)
         
-        if let endNode = self.nodeShape {
-            endNode.lineWidth = 2
-            endNode.fillColor = SKColor.darkGray
-            endNode.strokeColor = SKColor.darkGray
+        if let node = self.nodeShape {
+            node.lineWidth = 2
+            node.fillColor = SKColor.darkGray
+            node.strokeColor = SKColor.darkGray
         }
     }
     
@@ -38,13 +38,16 @@ class MainScene: SKScene {
         }
     }
     
+    // Source: Apple Developer Portal - Pathfinding
+    // https://developer.apple.com/library/content/documentation/General/Conceptual/GameplayKit_Guide/Pathfinding.html
+    //
+    // I used the source to learn about how pathfinding works in GameplayKit
+    
     private func findPathBetweenLastTwoNodes() {
         let offset = self.nodes.count - 1
         
-        // Source: Apple Developer Portal - Pathfinding
-        // https://developer.apple.com/library/content/documentation/General/Conceptual/GameplayKit_Guide/Pathfinding.html
-        //
-        // I used the source to learn about how pathfinding works in GameplayKit
+        // Define the obstacle graph for pathfinding
+        // and define the starting and ending points
         
         let graph = GKObstacleGraph(obstacles: self.obstacleGraph, bufferRadius: 8)
         let startNode = GKGraphNode2D(point: float2(x: Float(self.nodes[offset - 1].x), y: Float(self.nodes[offset - 1].y)))
@@ -53,12 +56,19 @@ class MainScene: SKScene {
         graph.connectUsingObstacles(node: startNode)
         graph.connectUsingObstacles(node: endNode)
         
+        // Find the shortest path in a background thread
+        
         DispatchQueue.global(qos: .userInitiated).async {
             let path = graph.findPath(from: startNode, to: endNode)
+            
+            // Return if there is no route available
             
             guard path.count > 0 else {
                 return
             }
+            
+            // Create obstacles for the pathfinder algorithm
+            // Obstacles are the outlines of the path sections
             
             for i in stride(from: 1, to: path.count, by: 1) {
                 let pointA = (path[i - 1] as! GKGraphNode2D).position
@@ -77,13 +87,15 @@ class MainScene: SKScene {
                 self.obstacleGraph.append(GKPolygonObstacle(points: outline))
             }
             
-            var f2PointArray = [float2]()
+            // Draw a line between the last two points
+            // to show the shortest path between them
+            
             var cgPointArray = [CGPoint]()
             
             for node in path {
                 if let grapNode = node as? GKGraphNode2D {
-                    f2PointArray.append(grapNode.position)
-                    cgPointArray.append(CGPoint(x: CGFloat(grapNode.position.x), y: CGFloat(grapNode.position.y)))
+                    let point = CGPoint(x: CGFloat(grapNode.position.x), y: CGFloat(grapNode.position.y))
+                    cgPointArray.append(point)
                 }
             }
             

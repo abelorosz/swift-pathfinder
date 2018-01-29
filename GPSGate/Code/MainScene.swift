@@ -1,5 +1,5 @@
 //
-//  Created by Abel Orosz on 2016-09-16.
+//  Created by Abel Orosz
 //  Copyright © 2016. Abel Orosz. All rights reserved.
 //
 
@@ -40,8 +40,6 @@ class MainScene: SKScene {
     
     // Source: Apple Developer Portal - Pathfinding
     // https://developer.apple.com/library/content/documentation/General/Conceptual/GameplayKit_Guide/Pathfinding.html
-    //
-    // I used the source to learn about how pathfinding works in GameplayKit
     
     private func findPathBetweenLastTwoNodes() {
         let offset = self.nodes.count - 1

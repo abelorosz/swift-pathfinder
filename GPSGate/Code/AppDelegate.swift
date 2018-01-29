@@ -1,5 +1,5 @@
 //
-//  Created by Abel Orosz on 2016-09-16.
+//  Created by Abel Orosz
 //  Copyright © 2016. Abel Orosz. All rights reserved.
 //
 

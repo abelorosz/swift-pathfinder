@@ -4,9 +4,9 @@
 
 
 ## Requirements
-- Swift 3.0
+- Swift 4.0
 - iOS 9.0+
-- Xcode 8.0+
+- Xcode 9.0+
 
 ## Usage
 - Tap on screen to create a point

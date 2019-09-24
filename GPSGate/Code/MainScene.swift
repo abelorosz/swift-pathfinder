@@ -48,7 +48,9 @@ class MainScene: SKScene {
         // and define the starting and ending points
         
         let graph = GKObstacleGraph(obstacles: self.obstacleGraph, bufferRadius: 7.0)
+        
         let startNode = GKGraphNode2D(point: float2(x: Float(self.nodes[offset - 1].x), y: Float(self.nodes[offset - 1].y)))
+        
         let endNode = GKGraphNode2D(point: float2(x: Float(self.nodes[offset].x), y: Float(self.nodes[offset].y)))
         
         graph.connectUsingObstacles(node: startNode)

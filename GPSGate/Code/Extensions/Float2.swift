@@ -5,10 +5,12 @@
 
 import SpriteKit
 
+typealias float2 = SIMD2<Float>
+
 extension float2 {
     
     func deltaTo(_ a: float2) -> float2 {
-        return float2(self.x - a.x, self.y - a.y)
+        return float2(Float(self.x) - a.x, self.y - a.y)
     }
     
     func length() -> Float {
@@ -19,5 +21,4 @@ extension float2 {
         let l = self.length()
         return float2(self.x / Float(l), self.y / Float(l))
     }
-    
 }

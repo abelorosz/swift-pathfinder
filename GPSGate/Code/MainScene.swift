@@ -49,9 +49,9 @@ class MainScene: SKScene {
         
         let graph = GKObstacleGraph(obstacles: self.obstacleGraph, bufferRadius: 7.0)
         
-        let startNode = GKGraphNode2D(point: SIMD2<Float>(x: Float(self.nodes[offset - 1].x), y: Float(self.nodes[offset - 1].y)))
+        let startNode = GKGraphNode2D(point: float2(x: Float(self.nodes[offset - 1].x), y: Float(self.nodes[offset - 1].y)))
         
-        let endNode = GKGraphNode2D(point: SIMD2<Float>(x: Float(self.nodes[offset].x), y: Float(self.nodes[offset].y)))
+        let endNode = GKGraphNode2D(point: float2(x: Float(self.nodes[offset].x), y: Float(self.nodes[offset].y)))
         
         graph.connectUsingObstacles(node: startNode)
         graph.connectUsingObstacles(node: endNode)
@@ -78,11 +78,11 @@ class MainScene: SKScene {
                 let unitBA = pointA.deltaTo(pointB).normalize()
                 
                 let size: Float = 3.0
-                var outline = [SIMD2<Float>]()
-                outline.append(SIMD2<Float>(x: unitAB.y * (-1) * size + pointA.x, y: unitAB.x * size + pointA.y))
-                outline.append(SIMD2<Float>(x: unitAB.y * size + pointA.x, y: unitAB.x * (-1) * size + pointA.y))
-                outline.append(SIMD2<Float>(x: unitBA.y * (-1) * size + pointB.x, y: unitBA.x * size + pointB.y))
-                outline.append(SIMD2<Float>(x: unitBA.y * size + pointB.x, y: unitBA.x * (-1) * size + pointB.y))
+                var outline = [float2]()
+                outline.append(float2(x: unitAB.y * (-1) * size + pointA.x, y: unitAB.x * size + pointA.y))
+                outline.append(float2(x: unitAB.y * size + pointA.x, y: unitAB.x * (-1) * size + pointA.y))
+                outline.append(float2(x: unitBA.y * (-1) * size + pointB.x, y: unitBA.x * size + pointB.y))
+                outline.append(float2(x: unitBA.y * size + pointB.x, y: unitBA.x * (-1) * size + pointB.y))
                 
                 self.obstacleGraph.append(GKPolygonObstacle(points: outline))
             }
